@@ -6,18 +6,31 @@ import java.util.ArrayList;
 public class ppkingJavaClass07 {
     public static void main(String[] pptest){
         //2016.10.3 ->一
-        int Year = 2017;
-        int Month = 11;
-        int Day = 21;
-        int [] FindMonth = {4,0,1,4,-1,3,4,0,3,5,1,3};
+        int Year = 2003;
+        int Month = 12;
+        int Day = 14;         //1 2 3 4 5 6 7 8 9 0 1 2
+        int [] FindMonth2016 = {6,2,2,5,0,3,5,1,4,6,2,4};// 2016
         String[] Today = {"日","一","二","三","四","五","六"};
 
+//        int Date =  (Day+FindMonth2016[Month-1])%7;   //1:4 2:0 3:1 4:4 5:-1 6:3  7:4  8月:0  9月:3 10月:5 11:1   12:3
+//        System.out.println(Today[Date]);
+        int x = 0;
+        x = FindMonth2016[Month-1]+Year+(Year/4)-(Year/100)+(Year/400);
+        System.out.println(x);
+        System.out.println(Day);
+        x = x + Day;
+        System.out.println(x);
 
 
-        int Date =  (Day+FindMonth[Month-1])%7;   //1:4 2:0 3:1 4:4 5:-1 6:3  7:4  8月:0  9月:3 10月:5 11:1   12:3
-        System.out.println(Today[Date]);
+        if( (Month<3)  && (Year % 4)==0){
+            x=x-1;
+            if((Year%100)==0) x++;
+            if((Year%400)==0) x--;
+        }
 
-
+        x = x %7 ;
+        System.out.println(x);
+        System.out.println(Today[x]);
 //        int year = 2016;
 //        int month = 2 ;
 //        switch (month){
