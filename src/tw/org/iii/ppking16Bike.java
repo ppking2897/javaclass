@@ -6,7 +6,7 @@ public class ppking16Bike {
         ppkingBike b2 = new ppkingBike();
         ppkingBike b3 = new ppkingBike();
         System.out.println(b1.getSpeed());
-
+        System.out.println("-------");
         b1.upSpeed();
         b1.upSpeed();
         b1.upSpeed();
