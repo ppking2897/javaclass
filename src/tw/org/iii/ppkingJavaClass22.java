@@ -11,7 +11,12 @@ public class ppkingJavaClass22 {
         //TWId()  TWId(true) 產生男性身分證  TWId('w',true) 產生金門地區　男生
         TWId id1 = new TWId('W',true);
         System.out.println(id1.getId());
-        if (TWId.isCheckOK("F127282897")){
+        if (TWId.isCheckOK(id1.getId())){
+            System.out.println("ok");
+        }else{
+            System.out.println("XX");
+        }
+        if(TWId.phoneNumberCheck("0422754205")){
             System.out.println("ok");
         }else{
             System.out.println("XX");

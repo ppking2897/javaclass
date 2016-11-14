@@ -82,4 +82,14 @@ public class TWId {
     public  String getId(){
         return this.id;
     }
+
+    public static boolean phoneNumberCheck (String num){
+        boolean ret = false;
+        if (ret = num.matches("^[0][0-9]{9}$")) {
+            int n1=Integer.parseInt(num.substring(1,2));
+            System.out.println(n1);
+
+        }
+        return ret;
+    }
 }
